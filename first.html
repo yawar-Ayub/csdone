@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aquamarine;
+        }
+        h1{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 50px;
+            border-radius: 20px;
+        }
+        span{
+            border: 2px dashed orange;
+        }
+        ul{
+            background-color: aqua;
+            padding: 10px;
+        }
+        
+        
+        .container{
+            border: 2px solid black;
+            max-width: 300px;
+            padding: 20px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: aqua;
+            box-shadow: 20px 20px 20px black;
+        }
+        .field{
+            width: 100%;
+        }
+        form div{
+            margin-bottom: 20px;
+            
+        }
+        @keyframes leftmotion {
+            0%{
+                opacity: 0;
+                transform: translate(-200px);
+                
+            }
+            80%{
+                opacity: 1;
+                transform: translate(20px);
+                transform: rotate(-10deg) ;
+                
+            }
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+            
+        }
+        @keyframes rightmotion {
+            0%{
+                opacity: 0;
+                transform: translate(200px);
+            }
+            100%{
+                opacity: 1;
+                transform: translate(0);
+            }
+            
+        }
+
+        @keyframes topmotion {
+            0%{
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+            60%{
+                transform: rotate(180deg);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .first{
+            animation: leftmotion 2s ease-out; 
+        }
+        .second{
+            animation: rightmotion 2s ease-out; 
+        }
+        .header{
+            animation: topmotion 2s ease-out;
+            text-align: center; 
+    </style>
+</head>
+<body>
+    <div class="container">
+
+
+    
+    <h2 class="header">Register form</h2>
+    <form method="post">
+        <div class="first">
+            <label>Username</label><br>
+            <input  class="field" type="text" name="username" placeholder="Give me the user name"><br>
+        </div>
+       <div class="second">
+        <label>password</label><br>
+        <input class="field" type ="password" name="password " placeholder="Give me the password">
+       </div>
+       <div class="first">
+        <label>adress</label><br>
+        <input  class="field"type="text" name="address" placeholder="Give me the address">
+       </div>
+        <div class="second">
+            <label>Date of Birth</label>
+        <input class="field" type="date" name="dob" placeholder="date of birth"><br>
+        </div>
+        
+        <input type="submit" value="submit">
+    </form>
+</div>
+</body>
+</html>
